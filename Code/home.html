@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikrant Patel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../images/about.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+  body{
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; 
+}
+.navbar{
+  position:sticky ;
+  
+}
+.custom-font{
+  font-size: 1.5rem;
+}
+.navbar-toggler{
+  border: 2px solid #e8082d;     /* any color, any width */
+  border-radius: .4rem;          /* rounded corners (optional) */
+  padding: .25rem .5rem;         /* tighten/loosen the hit‑area */
+  transition: box-shadow .25s;   /* smooth focus outline */
+}
+
+/* 2. Optional: subtle glow when the button receives focus (keyboard click) */
+.navbar-toggler:focus{
+  box-shadow: 0 0 0 .0.1rem rgb(228, 6, 6);
+  outline: none;                 /* remove default outline */
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='red' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-brand{
+  font-weight: bold;
+  border-bottom: 2px solid red;
+}
+  .navbar .nav-link:hover {
+  border-bottom: 2px solid red;
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+    }
+    .intro-text{
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 50px;
+    }
+     .hightlights{
+    font-size: 2rem;
+    color:rgba(33, 10, 208, 0.811);
+    font-weight: bold;
+    }
+    #change{
+
+      
+    font-size: 3rem;
+    color:red;
+    font-weight: bold;
+    
+    }
+    .social-icons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 30px;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0d6efd; /* or any hover color you like */
+}
+.about{
+  margin-top: 140px;
+  
+}
+ h1{
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+.about-content {
+  display: flex;
+  align-items: center;       /* Vertically center text with image */
+  justify-content: center;   /* Optional: center entire block horizontally */
+  gap: 2rem;                 /* Space between image and text */
+  padding: 20px;
+  flex-wrap: wrap;           /* Makes it responsive on smaller screens */
+}
+
+.about-content img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.5rem;
+  color: red;
+}
+.skills {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/* Skill Box Style */
+.skill-box {
+  background: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+.skill-box a{
+  text-decoration: none;
+  color: #fff;
+}
+.skill-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px red;
+  color: red;
+}
+.skills button{
+  border-radius: 10px ;
+  font-size: 1.25rem;
+  min-width: 25%;
+  padding: 5px;
+  margin-top: 25px;
+  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px red;
+  color: red;
+}
+
+.projects {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+}
+.contact{
+  background-color: #1a1a1a;
+  
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  
+}
+.contact .form-label{
+  color: #fff;
+  font-size: 1.5rem;
+}
+.contact input{
+  width: 50%;
+  
+}
+    </style>
+</head>
+<body>
+    <section class="home">
+      <nav class="navbar navbar-expand-lg bg-body-#fff">
+        <div class="container-fluid">
+          <a class="navbar-brand text-4xl custom-font text-white p-2" href="#">VP</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Use ms-auto to push to the right -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item custom-font  mx-2">
+                <a class="nav-link text-white" href="#about">About Me</a>
+              </li>
+              <li class="nav-item custom-font mx-2">
+                <a class="nav-link text-white" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item  custom-font mx-2">
+                <a class="nav-link text-white" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item custom-font  mx-2">
+                <a class="nav-link text-white" href="#contact">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="intro-text">
+        <p>I'm <span class="hightlights">Vikrant,</span> <span id="change">Frontend developer</span>.
+          
+          </p>
+           <p>I'm a web developer with 
+            extensive experience for year.</p> 
+          <p> Expertise is to create and website design,
+           Frontend design.</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/vikrant-patel-8a5032286/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/vikrantpatel7382/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/VikrantPatel2" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      
+
+    </section>
+    <section class="about" id="about">
+      <h1 class="display-3 items-center">About Me</h1>
+      <div class="about-content">
+        
+        <img src="../images/about.jpg" alt="author image">
+        <div class="about-text">
+          
+          <p>I'm am Vikrant Patel and I am pursuing B.Tech from Nit Jalandhar. I am a frontend devloper and also have an extensive experience for year. Expertise is to create and website design, Frontend Design.  </p>
+        </div>
+      
+      </div>
+    
+    </section>
+    <section class="skills" id="skills">
+      <h1 class="section-title">Skills</h1>
+      <div class="skills-grid">
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">React</div>
+        <div class="skill-box">Tailwind</div>
+        <div class="skill-box">Git</div>
+        <div class="skill-box">C++</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">C</div>
+        <div class="skill-box">Github</div>
+        <div class="skill-box">Next Js</div>
+        <div class="skill-box">Bootstrap</div>
+        <div class="skill-box">
+          <a href="https://leetcode.com/u/vikrantpatel080/"> Problem Solving</a>
+        </div>
+      </div>
+      <button>More Skills Coming Soon</button>
+    </section>
+    <section class="projects" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio showcasing my skills and projects using HTML, CSS, JS.</p>
+        </div>
+        <div class="project-card">
+          <h3>E-commerce App</h3>
+          <p>Fully responsive front-end for an e-commerce website using React and Tailwind.</p>
+        </div>
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>Weather app using OpenWeatherMap API with real-time updates and location access.</p>
+        </div>
+        <!-- Add more cards as needed -->
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>Weather app using OpenWeatherMap API with real-time updates and location access.</p>
+        </div>
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>Weather app using OpenWeatherMap API with real-time updates and location access.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      
+      <form>
+        <h1>Contact Us</h1>
+        <div class="mb-3">
+          <label for="first name" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="inputfirstname" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="first name" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="inputlastname" aria-describedby="lastHelp"></div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+     
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <Script src="script.js"></Script>
+  </body>
+</body>
+</html>
