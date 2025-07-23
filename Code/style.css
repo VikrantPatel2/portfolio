@@ -3,3 +3,84 @@ body{
   padding: 0;
   background-color: #1a1a1a;
 }
+.project-card button{
+  border: 1px solid black;
+  border-radius: 5px;
+  
+  justify-content: space-between;
+}
+.project-card #source-code{
+  margin-left: 30px;
+}
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.contact-form {
+  background-color: #2b2b2b;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00bfff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00bfff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #009fcc;
+}
+
+@media (max-width: 500px) {
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
