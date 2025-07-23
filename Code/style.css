@@ -75,6 +75,30 @@ body{
   background-color: #009fcc;
 }
 
+.contact-form{
+  .social-icons {
+  display: flex;
+  gap: 1rem; /* space between icons */
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: #00bfff;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+}
+.project-card img{
+  width: 100%;
+  border-radius: 5px;
+}
+
 @media (max-width: 500px) {
   .form-group {
     margin-bottom: 0.75rem;
