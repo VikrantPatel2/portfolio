@@ -99,6 +99,18 @@ body{
   border-radius: 5px;
 }
 
+textarea{
+  background-color: #444;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.footer{
+ background-color: #1a1a1a;
+ text-align: center;
+ color: #FFF;
+}
+ 
+
 @media (max-width: 500px) {
   .form-group {
     margin-bottom: 0.75rem;
