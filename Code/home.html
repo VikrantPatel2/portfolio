@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../images/about.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "E6xmyyOZ7DhdQo_Mw",
+      });
+   })();
+</script>
   <style>
   body{
   margin: 0;
@@ -189,7 +199,7 @@
 }
 
 .project-card {
-  background: white;
+  background: #0e0202;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -205,12 +215,12 @@
 .project-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #222;
+  color: #fff;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #555;
+  color: #fff;
 }
 .contact{
   background-color: #1a1a1a;
@@ -317,26 +327,26 @@
     <section class="projects" id="projects">
       <h2 class="section-title">Projects</h2>
       <div class="projects-container">
-        <div class="project-card">
+        <div class="project-card" style="">
           <h3>Portfolio Website</h3>
           <img src="../images/portfilo.jpg" alt="portfolio-image">
           <p>A personal portfolio showcasing my skills and projects using HTML, CSS, JS.</p>
           <button id="live-view">Live View</button>
-          <button id="source-code">Source Code</button>
+          <button id="source-code"> <a href="https://github.com/VikrantPatel2/portfolio">Source Code</a></button>
         </div>
         <div class="project-card">
           <h3>E-commerce App</h3>
            <img src="../images/ecommerce.jpg" alt="e-commerce">
           <p>Fully responsive front-end for an e-commerce website using React and Tailwind.</p>
            <button id="live-view">Live View</button>
-          <button id="source-code">Source Code</button>
+           <button id="source-code"> <a href="https://github.com/VikrantPatel2/JSProject/tree/main/Ecommerce">Source Code</a></button>
         </div>
         <div class="project-card">
           <h3>Weather App</h3>
           <img src="../images/weather app.jpg" alt="weather app">
           <p>Weather app using OpenWeatherMap API with real-time updates and location access.</p>
            <button id="live-view">Live View</button>
-          <button id="source-code">Source Code</button>
+          <button id="source-code"> <a href="https://github.com/VikrantPatel2/JSProject/tree/main/weatherapp">Source Code</a></button>
         </div>
         <!-- Add more cards as needed -->
         <div class="project-card">
@@ -344,14 +354,14 @@
           <img src="../images/todolist.jpg" alt="to do list">
           <p>Weather app using OpenWeatherMap API with real-time updates and location access.</p>
            <button id="live-view">Live View</button>
-          <button id="source-code">Source Code</button>
+          <button id="source-code"> <a href="https://github.com/VikrantPatel2/JSProject/tree/main/todoList">Source Code</a></button>
         </div>
         <div class="project-card">
           <h3>Expense Tracker</h3>
           <img src="../images/expense tracker.jpg" alt="expense" style="height: 200px;">
           <p>Weather app using OpenWeatherMap API with real-time updates and location access.</p>
           <button id="live-view">Live View</button>
-          <button id="source-code">Source Code</button>
+          <button id="source-code"> <a href="https://github.com/VikrantPatel2/JSProject/tree/main/Ecommerce">Source Code</a></button>
         </div>
       </div>
     </section>
@@ -359,8 +369,8 @@
     <section id="contact" style="background-color: #1a1a1a; padding: 4rem 1rem;">
   <div class="contact-form">
     <h2>Contact Me</h2>
-    <form>
-      <div class="form-group">
+    <form id="contact-form">
+      <div class="form-group"> 
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" required />
       </div>
@@ -394,6 +404,25 @@
   </div>
 </section>
    
+    <script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm(
+        'service_ysgalkq',    // ✅ Replace this
+        'template_dhmxftu',   // ✅ Replace this
+        this
+      ).then(function () {
+        alert('Email sent successfully!');
+        form.reset();
+      }, function (error) {
+        console.error('EmailJS Error:', error); 
+        alert('Failed to send email: ' + error.text);
+      });
+    });
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <Script src="script.js"></Script>
   </body>

@@ -12,6 +12,10 @@ body{
 .project-card #source-code{
   margin-left: 30px;
 }
+#source-code a{
+  text-decoration: none;
+  color: #444;
+}
 #contact {
   display: flex;
   justify-content: center;
@@ -75,6 +79,8 @@ body{
   background-color: #009fcc;
 }
 
+
+.project-card h
 .contact-form{
   .social-icons {
   display: flex;
